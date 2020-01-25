@@ -9,6 +9,12 @@ public class BehaviourState : MonoBehaviour
     public bool Talking;
     public bool InMidState;
 
+    protected Animator agentAnimator;
+
+    private void Awake()
+    {
+        agentAnimator = GameObject.Find("AgentFemale").GetComponent<Animator>();
+    }
     public virtual void StateLogic()
     {
         //

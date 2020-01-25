@@ -9,8 +9,9 @@ public class DescriptionState : BehaviourState
 
     public override void StateLogic()
     {
-        Debug.Log(DebugMessage);
-
+        bool a = agentAnimator;
+        Debug.Log(DebugMessage + "and " + a);
+        agentAnimator.SetTrigger("02Description");       
         base.StateLogic();
     }
 }
