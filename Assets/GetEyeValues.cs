@@ -53,6 +53,7 @@ public class GetEyeValues : MonoBehaviour
 
     private void Update()
     {
+        //cartof
         GetGazePoint();
         UpdateEyeDiameter();
         UpdateEyeOpen();
