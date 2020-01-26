@@ -336,7 +336,7 @@ MonoBehaviour:
     - 0
     - 0
     - 0
-    - 0
+    - 0.0024402738
 --- !u!114 &-4789966863600492424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,7 +453,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  - 0
+  - 0.0024402738
   arrayToOutput:
   - 0
   - 0
@@ -481,7 +481,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  - 0
+  - 0.0024402738
   ValueName: LipReadings
 --- !u!114 &-2557407380475816141
 MonoBehaviour:
@@ -1039,8 +1039,8 @@ MonoBehaviour:
   InputFeatures:
   - {fileID: -5230735152729629913}
   ModelOutput: {fileID: 0}
-  KeyboardControl: 0
-  TrainingKey: 0
+  KeyboardControl: 1
+  TrainingKey: 323
   RunningKey: 0
   PredictedRapidlibOutput:
   - 0
