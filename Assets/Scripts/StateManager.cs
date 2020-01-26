@@ -20,7 +20,7 @@ public class StateManager : MonoBehaviour
 
     private void Update()
     {
-        CurrentState.timer+= Time.deltaTime;
+        if(Talking) CurrentState.timer+= Time.deltaTime;
         if (CurrentState.timer>=CurrentState.maxTime)
         {
             //if is lower than the threshold and the agent will stop talking and will also look at something else.

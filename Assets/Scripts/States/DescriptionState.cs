@@ -9,7 +9,7 @@ public class DescriptionState : BehaviourState
 
     public override void StateLogic()
     {
-
+        maxTime = 20;
         Debug.Log(DebugMessage);
         agentAnimator.SetTrigger("02Description");       
         base.StateLogic();
