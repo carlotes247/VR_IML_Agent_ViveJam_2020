@@ -1,10 +1,116 @@
 {
    "metadata" : {
       "creator" : "Rapid API C++",
-      "inputNames" : null,
-      "numInputs" : -1,
-      "numOutputs" : -1,
+      "inputNames" : [ "inputs-1", "inputs-2" ],
+      "numInputs" : 2,
+      "numOutputs" : 1,
       "version" : "v0.1.1"
    },
-   "modelSet" : null
+   "modelSet" : [
+      {
+         "examples" : [
+            {
+               "class" : -1,
+               "features" : [ 0, 0.024626679718494415 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.0069357361644506454, 0.030608596280217171 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0, 0.02493831142783165 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0, 0.034441258758306503 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.022009409964084625, 0.036613162606954575 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.014855753630399704, 0.029612155631184578 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.014759164303541183, 0.020715273916721344 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.036269292235374451, 0.038198854774236679 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.02806491032242775, 0.040229450911283493 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.028224609792232513, 0.044377557933330536 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.026302088052034378, 0.046336665749549866 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.021912576630711555, 0.044633403420448303 ]
+            },
+            {
+               "class" : -1,
+               "features" : [ 0.031065236777067184, 0.039179958403110504 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            },
+            {
+               "class" : 5,
+               "features" : [ 1, 1 ]
+            }
+         ],
+         "inputNames" : [ "inputs-1", "inputs-2" ],
+         "k" : 1,
+         "modelType" : "kNN Classificiation",
+         "numInputs" : 2,
+         "whichInputs" : [ 0, 1 ]
+      }
+   ]
 }

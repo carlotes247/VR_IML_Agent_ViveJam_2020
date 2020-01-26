@@ -23,7 +23,7 @@ public class BehaviourState : MonoBehaviour
     public void StopTalking()
     {
         //Talking = false;
-        Debug.Log("Agent has stopped talking");
+        //Debug.Log("Agent has stopped talking");
         agentAnimator.SetLayerWeight(1, 0.1f);
 
     }
@@ -31,7 +31,7 @@ public class BehaviourState : MonoBehaviour
     public void ContinueTalking()
     {
         //Talking = true;
-        Debug.Log("Agent has started talking again");
+        //Debug.Log("Agent has started talking again");
         agentAnimator.SetLayerWeight(1, 1f);
 
     }
@@ -43,7 +43,7 @@ public class BehaviourState : MonoBehaviour
         AnimatorStateInfo currentStateInfo;
         currentStateInfo = agentAnimator.GetCurrentAnimatorStateInfo(1);//the active layer is at index 1 
         //Access the Animation clip name
-        Debug.Log("clip name: " + currentStateInfo.IsName(endOfStateName));
+        //Debug.Log("clip name: " + currentStateInfo.IsName(endOfStateName));
         return (currentStateInfo.IsName(endOfStateName));
         //if (currentClipInfo[0].clip.name == endOfStateClipName) EndOfCurrentState = true;
         //else EndOfCurrentState = false;
