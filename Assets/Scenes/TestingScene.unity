@@ -1128,9 +1128,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentState: {fileID: 1337594932}
   CurrentScore: 0.2
-  LowScoreStreshold: 0.3
-  StopTalkingStreshold: 0
+  LowScoreThreshold: 0.3
   Talking: 1
+  AgentGazeIKScript: {fileID: 2080884144}
+  LookAtObjectWhenSilenced: {fileID: 808812117}
 --- !u!1 &1933036037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,7 +1201,7 @@ MonoBehaviour:
   UserHeadCamTransform: {fileID: 0}
   lookAtProgress: 0
   TransitionLookAt: 0
-  TransitionTime: 4.26
+  TransitionTime: 3
   ChangedLookAtPositionTime: 0
 --- !u!1 &2095044058
 GameObject:

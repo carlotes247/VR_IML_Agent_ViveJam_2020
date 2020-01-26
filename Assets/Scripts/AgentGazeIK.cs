@@ -76,7 +76,7 @@ public class AgentGazeIK : MonoBehaviour
                     if (!TransitionLookAt)
                     {
                         m_animator.SetLookAtPosition(m_lookObj.position);
-                        updateObjLookAt();
+                        //updateObjLookAt();
                     }
                     else m_animator.SetLookAtPosition(transitionLookAtPosition);
                 }
