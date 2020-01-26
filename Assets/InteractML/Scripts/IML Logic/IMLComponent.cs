@@ -6,6 +6,7 @@ using UnityEngine;
 using ReusableMethods;
 using XNode.Examples.MathNodes;
 using UnityEngine.SceneManagement;
+using System.Linq;
 #if UNITY_EDITOR
 using UnityEditor.SceneManagement;
 using UnityEditor;
@@ -585,7 +586,7 @@ namespace InteractML
                             {
                                 // Create a Float node into the graph
                                 DataTypeNodes.FloatNode floatNode = MLController.AddNode<DataTypeNodes.FloatNode>();
-                                floatNode.Value = (float) fieldToUse.GetValue(gameComponent);
+                                floatNode.Value = (float)fieldToUse.GetValue(gameComponent);
                                 floatNode.ValueName = fieldToUse.Name;
                                 floatNode.name = fieldToUse.Name + " (Float Node)";
 
@@ -650,6 +651,52 @@ namespace InteractML
                                 m_DataContainersPerFieldInfo.Add(fieldToUse, infoContainer);
 
                             }
+                            else if (fieldToUse.FieldType == typeof(float[]))
+                            {
+                                DataTypeNodes.SerialVectorNode newNode = null;
+                                // First, we try and see if the graph already contains a node we can use
+                                foreach (var node in MLController.nodes)
+                                {
+                                    // We see if this node is of the right type
+                                    if (node.GetType() == typeof(DataTypeNodes.SerialVectorNode))
+                                    {
+                                        // We check if the node is available to use
+                                        var isTaken = m_DataContainersPerFieldInfo.Values.Any(container => container.nodeForField == node);
+                                        // If the node is not taken...
+                                        if (!isTaken)
+                                        {
+                                            // This will be our node!
+                                            newNode = (DataTypeNodes.SerialVectorNode)node;
+                                            // Stop searching for nodes
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                // If we didn't find a suitable existing node...
+                                if (newNode == null)
+                                {
+                                    // Create a new Serial Vector node into the graph
+                                    newNode = MLController.AddNode<DataTypeNodes.SerialVectorNode>();
+                                    // Save newnode to graph on disk                              
+                                    AssetDatabase.AddObjectToAsset(newNode, MLController);
+                                    // Reload graph into memory since we have modified it on disk
+                                    AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(MLController));
+
+                                }
+
+                                // Configure our node appropiately
+                                newNode.Value = (float[])fieldToUse.GetValue(gameComponent);
+                                newNode.ValueName = fieldToUse.Name;
+                                newNode.name = fieldToUse.Name + " (Serial Vector Node)";
+
+                                // Add all info to a container
+                                IMLFieldInfoContainer infoContainer = new IMLFieldInfoContainer(fieldToUse, newNode, IMLSpecifications.DataTypes.SerialVector, gameComponent);
+                                // Add that to the dictionary
+                                m_DataContainersPerFieldInfo.Add(fieldToUse, infoContainer);
+
+
+                            }
                         }
                         // If the dictionary already contains a fieldInfo, update it
                         else if (true)
@@ -676,6 +723,7 @@ namespace InteractML
                                     (dataContainer.nodeForField as DataTypeNodes.Vector4Node).Value = (Vector4)fieldToUse.GetValue(gameComponent);
                                     break;
                                 case IMLSpecifications.DataTypes.SerialVector:
+                                    (dataContainer.nodeForField as DataTypeNodes.SerialVectorNode).Value = (float[])fieldToUse.GetValue(gameComponent);
                                     break;
                                 default:
                                     break;
