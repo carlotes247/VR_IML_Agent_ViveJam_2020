@@ -10,6 +10,7 @@ public class AngerState : BehaviourState
     public override void StateLogic()
     {
         Debug.Log(DebugMessage);
+        agentAnimator.SetTrigger("04Angry_high");
 
         base.StateLogic();
     }

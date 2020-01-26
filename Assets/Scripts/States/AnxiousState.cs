@@ -10,6 +10,7 @@ public class AnxiousState : BehaviourState
     public override void StateLogic()
     {
         Debug.Log(DebugMessage);
+        agentAnimator.SetTrigger("04Anxious_low");
 
         base.StateLogic();
     }

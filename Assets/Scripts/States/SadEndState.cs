@@ -10,6 +10,7 @@ public class SadEndState : BehaviourState
     public override void StateLogic()
     {
         Debug.Log(DebugMessage);
+        agentAnimator.SetTrigger("06SadEnd_low");
 
         base.StateLogic();
     }

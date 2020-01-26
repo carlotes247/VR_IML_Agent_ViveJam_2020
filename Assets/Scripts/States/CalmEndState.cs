@@ -10,6 +10,7 @@ public class CalmEndState : BehaviourState
     public override void StateLogic()
     {
         Debug.Log(DebugMessage);
+        agentAnimator.SetTrigger("06CalmEnd_high");
 
         base.StateLogic();
     }

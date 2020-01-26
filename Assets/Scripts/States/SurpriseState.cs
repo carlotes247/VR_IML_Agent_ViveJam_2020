@@ -9,7 +9,8 @@ public class SurpriseState : BehaviourState
 
     public override void StateLogic()
     {
-        Debug.Log(DebugMessage);
+        Debug.Log(DebugMessage); 
+        agentAnimator.SetTrigger("01Surprise");
 
         base.StateLogic();
     }

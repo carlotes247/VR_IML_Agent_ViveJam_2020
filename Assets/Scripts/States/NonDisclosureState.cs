@@ -10,6 +10,7 @@ public class NonDisclosureState : BehaviourState
     public override void StateLogic()
     {
         Debug.Log(DebugMessage);
+        agentAnimator.SetTrigger("05NonDisclosure_low");
 
         base.StateLogic();
     }
