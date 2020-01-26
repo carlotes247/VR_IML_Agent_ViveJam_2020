@@ -58,7 +58,15 @@ public class IMLOutputToAgentPipe : MonoBehaviour
                 // If not, then punish score
                 else
                 {
-                    AgentState.CurrentScore -= RewardAgent / 4;
+                    if (AgentState.CurrentScore < 0f)
+                    {
+                        AgentState.CurrentScore = 0f;
+                    }
+                    else
+                    {
+                        AgentState.CurrentScore -= RewardAgent / 4;
+
+                    }
                 }
             }
             

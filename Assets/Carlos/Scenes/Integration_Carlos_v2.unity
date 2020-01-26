@@ -2042,7 +2042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MLComponent: {fileID: 1366707455}
-  AgentState: {fileID: 0}
+  AgentState: {fileID: 1576350533}
   ValueToSend: 0
   GestureVocab:
   - GestureName: Wave Right Hand
@@ -2057,6 +2057,12 @@ MonoBehaviour:
   - GestureName: Sad
     GestureExpectedValue: -20
     GestureIMLOutputIndex: 0
+  - GestureName: Eyes Open
+    GestureExpectedValue: 5
+    GestureIMLOutputIndex: 1
+  - GestureName: Eyes Closed
+    GestureExpectedValue: -1
+    GestureIMLOutputIndex: 1
   RewardAgent: 10
 --- !u!114 &155702007
 MonoBehaviour:
@@ -23790,7 +23796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2056009711
 Animator:
   serializedVersion: 3
