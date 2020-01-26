@@ -609,6 +609,12 @@ MonoBehaviour:
   TargetLayer: Default
   GazePoint: {x: 0, y: 0, z: 0}
   IsGazing: 0
+  pupilDiameterLeft: 0
+  pupilDiameterRight: 0
+  pupilPositionLeft: {x: 0, y: 0}
+  pupilPositionRight: {x: 0, y: 0}
+  eyeOpenLeft: 0
+  eyeOpenRight: 0
 --- !u!4 &759208242
 Transform:
   m_ObjectHideFlags: 0

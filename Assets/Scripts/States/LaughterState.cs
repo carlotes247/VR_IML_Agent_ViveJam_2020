@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaughterState : BehaviourState
 {
-    public string DebugMessage;
+    public string DebugMessage = "03Laughter";
 
 
     public override void StateLogic()
