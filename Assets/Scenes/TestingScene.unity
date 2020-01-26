@@ -265,6 +265,8 @@ MonoBehaviour:
   LowScoreNextState: {fileID: 744681191}
   EndOfCurrentState: 0
   AnimationClipName: 
+  timer: 0
+  maxTime: 0
   DebugMessage: anxious_low
 --- !u!4 &167417964
 Transform:
@@ -345,6 +347,8 @@ MonoBehaviour:
   LowScoreNextState: {fileID: 785667940}
   EndOfCurrentState: 0
   AnimationClipName: 
+  timer: 0
+  maxTime: 0
   DebugMessage: disclosure_high
 --- !u!4 &481139535
 Transform:
@@ -578,6 +582,8 @@ MonoBehaviour:
   LowScoreNextState: {fileID: 0}
   EndOfCurrentState: 0
   AnimationClipName: 
+  timer: 0
+  maxTime: 0
   DebugMessage: nondisclosure_low
 --- !u!4 &744681192
 Transform:
@@ -626,6 +632,8 @@ MonoBehaviour:
   LowScoreNextState: {fileID: 0}
   EndOfCurrentState: 0
   AnimationClipName: 
+  timer: 0
+  maxTime: 0
   DebugMessage: sadend_low
 --- !u!4 &785667941
 Transform:
@@ -762,11 +770,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743ec916f07338b4dade590aad79e8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextState: {fileID: 2095044059}
+  NextState: {fileID: 167417963}
   LowScoreNextState: {fileID: 167417963}
   EndOfCurrentState: 0
   AnimationClipName: 
-  DebugMessage: 
+  timer: 0
+  maxTime: 0
+  DebugMessage: laughter
 --- !u!4 &827842538
 Transform:
   m_ObjectHideFlags: 0
@@ -814,6 +824,8 @@ MonoBehaviour:
   LowScoreNextState: {fileID: 0}
   EndOfCurrentState: 0
   AnimationClipName: 
+  timer: 0
+  maxTime: 0
   DebugMessage: calmend
 --- !u!4 &1024806862
 Transform:
@@ -928,6 +940,8 @@ MonoBehaviour:
   LowScoreNextState: {fileID: 1510913422}
   EndOfCurrentState: 0
   AnimationClipName: 
+  timer: 0
+  maxTime: 0
   DebugMessage: surprise
 --- !u!4 &1337594933
 Transform:
@@ -1059,6 +1073,8 @@ MonoBehaviour:
   LowScoreNextState: {fileID: 827842537}
   EndOfCurrentState: 0
   AnimationClipName: 
+  timer: 0
+  maxTime: 0
   DebugMessage: description
 --- !u!4 &1510913423
 Transform:
@@ -1219,7 +1235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2095044059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,6 +1252,8 @@ MonoBehaviour:
   LowScoreNextState: {fileID: 744681191}
   EndOfCurrentState: 0
   AnimationClipName: 
+  timer: 0
+  maxTime: 0
   DebugMessage: angry_high
 --- !u!4 &2095044060
 Transform:

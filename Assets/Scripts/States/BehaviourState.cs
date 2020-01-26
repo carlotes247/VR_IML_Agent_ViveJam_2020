@@ -8,16 +8,21 @@ public class BehaviourState : MonoBehaviour
     public BehaviourState LowScoreNextState;
     public bool EndOfCurrentState;
     public string AnimationClipName;
+    public float timer;
+    public float maxTime;
 
     protected Animator agentAnimator;
 
     private void Awake()
     {
         agentAnimator = GameObject.Find("AgentFemale").GetComponent<Animator>();
+        maxTime = 10;
     }
     public virtual void StateLogic()
     {
-       //CheckEndOfState();
+        //CheckEndOfState();
+        timer = 0;
+        //int seconds = timer % 60;
     }
 
     public void StopTalking()
@@ -43,7 +48,7 @@ public class BehaviourState : MonoBehaviour
         AnimatorStateInfo currentStateInfo;
         currentStateInfo = agentAnimator.GetCurrentAnimatorStateInfo(1);//the active layer is at index 1 
         //Access the Animation clip name
-        Debug.Log("clip name: " + currentStateInfo.IsName(endOfStateName));
+        //Debug.Log("clip name: " + currentStateInfo.IsName(endOfStateName));
         return (currentStateInfo.IsName(endOfStateName));
         //if (currentClipInfo[0].clip.name == endOfStateClipName) EndOfCurrentState = true;
         //else EndOfCurrentState = false;
