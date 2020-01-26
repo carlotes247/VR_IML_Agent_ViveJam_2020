@@ -9,6 +9,7 @@ public class LaughterState : BehaviourState
 
     public override void StateLogic()
     {
+        maxTime = 18;
         Debug.Log(DebugMessage);
         agentAnimator.SetTrigger("03Laughter");
         base.StateLogic();

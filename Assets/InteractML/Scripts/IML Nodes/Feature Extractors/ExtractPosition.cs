@@ -24,6 +24,11 @@ namespace InteractML.FeatureExtractors
         public Node positionExtracted;
 
         /// <summary>
+        /// Controls whether to use local space or not
+        /// </summary>
+        public bool useLocalSpace;
+
+        /// <summary>
         /// Feature Values extracted (ready to be read by a different node)
         /// </summary>
         public IMLBaseDataType FeatureValues { get { return m_PositionExtracted; } }
