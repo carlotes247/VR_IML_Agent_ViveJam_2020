@@ -81,6 +81,61 @@ MonoBehaviour:
   CaptureRate: 10
   RecordTime: -1
   EnableCollectDataShortcut: 0
+--- !u!114 &-8681559455291319859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951c4d4b1f5774e4889ccfa10aab7dc0, type: 3}
+  m_Name: Training Examples
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -344, y: -1352}
+  ports:
+    keys:
+    - InputFeatures
+    - TrainingExamplesNodeToOutput
+    values:
+    - _fieldName: InputFeatures
+      _node: {fileID: -8681559455291319859}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.Node, XNode, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: serialVectorFeatureExtracted
+        node: {fileID: -5230735152729629913}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: TrainingExamplesNodeToOutput
+      _node: {fileID: -8681559455291319859}
+      _typeQualifiedName: InteractML.TrainingExamplesNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  InputFeatures:
+  - {fileID: -5230735152729629913}
+  TrainingExamplesNodeToOutput: {fileID: -8681559455291319859}
+  ModeOfCollection: 0
+  TrainingExamplesVector: []
+  TrainingSeriesCollection: []
+  m_DesiredInputsConfig: 05000000
+  m_DesiredOutputsConfig: 00000000
+  IMLConfigurationNodesConnected: []
+  StartDelay: 0
+  CaptureRate: 10
+  RecordTime: -1
+  EnableCollectDataShortcut: 0
 --- !u!114 &-8504596287838510589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +255,7 @@ MonoBehaviour:
   floatExtracted: {fileID: 0}
   m_FloatExtracted:
     m_Values:
-    - 5.004013
+    - -1
 --- !u!114 &-7297236317753175312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,8 +345,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
-  Value: 0.5115851
-  FloatToOutput: 0.5115851
+  Value: 1
+  FloatToOutput: 1
   ValueName: EyeOpenLeft
 --- !u!114 &-6545192815752675630
 MonoBehaviour:
@@ -418,8 +473,11 @@ MonoBehaviour:
       - fieldName: InputFeatures
         node: {fileID: 8240335313252649488}
         reroutePoints:
-        - {x: -320, y: -160}
-        - {x: 48, y: -112}
+        - {x: -384, y: -96}
+        - {x: -16, y: -48}
+      - fieldName: InputFeatures
+        node: {fileID: -8681559455291319859}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -429,33 +487,33 @@ MonoBehaviour:
   serialVectorFeatureExtracted: {fileID: 0}
   m_arrayExtracted:
     m_Values:
-    - 0.404436
-    - 1e-45
-    - 0.15920228
-    - 0.1069189
-    - 0
-    - 0.08708947
-    - 0.57619417
-    - 6.5493705e-20
-    - 0.14613312
     - 0
     - 0
     - 0
     - 0
-    - 1e-45
-    - 1e-45
-    - 1e-45
     - 0
-    - 0.11306119
     - 0
-    - 1e-45
-    - 0.011922838
-    - 0.1744971
-    - 0.2566967
-    - 0.26443684
-    - 6.3952874e-31
-    - 0.08838037
-    - 0.039198995
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
 --- !u!114 &-5061285657783036032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,7 +633,7 @@ MonoBehaviour:
   m_Name: Training Examples
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -296, y: -712}
+  position: {x: -360, y: -648}
   ports:
     keys:
     - InputFeatures
@@ -652,61 +710,61 @@ MonoBehaviour:
       _dynamic: 0
   DevMode: 0
   Value:
-  - 0.404436
-  - 1e-45
-  - 0.15920228
-  - 0.1069189
-  - 0
-  - 0.08708947
-  - 0.57619417
-  - 6.5493705e-20
-  - 0.14613312
   - 0
   - 0
   - 0
   - 0
-  - 1e-45
-  - 1e-45
-  - 1e-45
   - 0
-  - 0.11306119
   - 0
-  - 1e-45
-  - 0.011922838
-  - 0.1744971
-  - 0.2566967
-  - 0.26443684
-  - 6.3952874e-31
-  - 0.08838037
-  - 0.039198995
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   arrayToOutput:
-  - 0.404436
-  - 1e-45
-  - 0.15920228
-  - 0.1069189
-  - 0
-  - 0.08708947
-  - 0.57619417
-  - 6.5493705e-20
-  - 0.14613312
   - 0
   - 0
   - 0
   - 0
-  - 1e-45
-  - 1e-45
-  - 1e-45
   - 0
-  - 0.11306119
   - 0
-  - 1e-45
-  - 0.011922838
-  - 0.1744971
-  - 0.2566967
-  - 0.26443684
-  - 6.3952874e-31
-  - 0.08838037
-  - 0.039198995
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   ValueName: LipReadings
 --- !u!114 &-3221549251179484766
 MonoBehaviour:
@@ -760,8 +818,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
-  Value: 0.8506985
-  FloatToOutput: 0.8506985
+  Value: 1
+  FloatToOutput: 1
   ValueName: EyeOpenRight
 --- !u!114 &-2425127250995515474
 MonoBehaviour:
@@ -794,8 +852,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
-  Value: {x: 0.36424935, y: 0.60154897}
-  Vector2ToOutput: {x: 0.36424935, y: 0.60154897}
+  Value: {x: -1, y: -1}
+  Vector2ToOutput: {x: -1, y: -1}
   ValueName: PupilPositionLeft
 --- !u!114 &-2017589130068350235
 MonoBehaviour:
@@ -908,8 +966,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
-  Value: 4.45961
-  FloatToOutput: 4.45961
+  Value: -1
+  FloatToOutput: -1
   ValueName: PupilDiameterLeft
 --- !u!114 &-1582970655957511384
 MonoBehaviour:
@@ -996,7 +1054,7 @@ MonoBehaviour:
   floatExtracted: {fileID: 0}
   m_FloatExtracted:
     m_Values:
-    - 0.8506985
+    - 1
 --- !u!114 &-1032483147684682443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +1068,7 @@ MonoBehaviour:
   m_Name: Text Note
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 519.1485, y: -558.0118}
+  position: {x: 616, y: -776}
   ports:
     keys: []
     values: []
@@ -1032,7 +1090,7 @@ MonoBehaviour:
   m_Name: Text Note
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -152, y: -856}
+  position: {x: -216, y: -792}
   ports:
     keys: []
     values: []
@@ -1090,7 +1148,7 @@ MonoBehaviour:
   floatExtracted: {fileID: 0}
   m_FloatExtracted:
     m_Values:
-    - 4.45961
+    - -1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,6 +1200,7 @@ MonoBehaviour:
   - {fileID: -5402357897516457992}
   - {fileID: -3221549251179484766}
   - {fileID: -1032483147684682443}
+  - {fileID: -8681559455291319859}
   SceneComponent: {fileID: 0}
 --- !u!114 &904256304394703803
 MonoBehaviour:
@@ -1204,8 +1263,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
-  Value: 5.004013
-  FloatToOutput: 5.004013
+  Value: -1
+  FloatToOutput: -1
   ValueName: PupilDiameterRight
 --- !u!114 &2213579486959961248
 MonoBehaviour:
@@ -1258,15 +1317,15 @@ MonoBehaviour:
   VelocityExtracted: {fileID: 0}
   m_VelocityExtracted:
     m_Values:
-    - -0.17486171
-    - -0.869754
-    - -0.1612166
-    - -0.38390273
+    - 0
+    - 0
+    - 0
+    - 0
   m_LastFrameFeatureValue:
-  - -0.35777366
-  - -0.3384356
-  - 0.046632137
-  - 0.86907125
+  - 0
+  - 0
+  - 0
+  - 1
 --- !u!114 &5116715102361916799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1353,8 +1412,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
-  Value: {x: 0.3435253, y: 0.6247445}
-  Vector2ToOutput: {x: 0.3435253, y: 0.6247445}
+  Value: {x: -1, y: -1}
+  Vector2ToOutput: {x: -1, y: -1}
   ValueName: PupilPositionRight
 --- !u!114 &5932157540164908367
 MonoBehaviour:
@@ -1426,10 +1485,10 @@ MonoBehaviour:
   useLocalSpace: 1
   m_RotationExtracted:
     m_Values:
-    - -0.35777366
-    - -0.3384356
-    - 0.046632137
-    - 0.86907125
+    - 0
+    - 0
+    - 0
+    - 1
   GameObjInputMissing: 0
 --- !u!114 &7974435636326611072
 MonoBehaviour:
@@ -1506,7 +1565,7 @@ MonoBehaviour:
   floatExtracted: {fileID: 0}
   m_FloatExtracted:
     m_Values:
-    - 0.5115851
+    - 1
 --- !u!114 &8240335313252649488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1520,7 +1579,7 @@ MonoBehaviour:
   m_Name: IML Configuration
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 424, y: -392}
+  position: {x: 520, y: -600}
   ports:
     keys:
     - IMLTrainingExamplesNodes
@@ -1566,8 +1625,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
-  IMLTrainingExamplesNodes:
-  - {fileID: -4789966863600492424}
+  IMLTrainingExamplesNodes: []
   InputFeatures:
   - {fileID: -5230735152729629913}
   ModelOutput: {fileID: 0}
@@ -1577,12 +1635,12 @@ MonoBehaviour:
   PredictedRapidlibOutput:
   - 0
   DelayedPredictedOutput:
-  - 0
+  - -20
   m_ExpectedInputList: 05000000
   m_ExpectedOutputList: 00000000
   m_LearningType: 0
-  TrainOnPlaymodeChange: 0
-  RunOnAwake: 0
+  TrainOnPlaymodeChange: 1
+  RunOnAwake: 1
 --- !u!114 &8750345229942117485
 MonoBehaviour:
   m_ObjectHideFlags: 0
