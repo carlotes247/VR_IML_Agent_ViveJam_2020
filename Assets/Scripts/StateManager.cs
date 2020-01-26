@@ -32,7 +32,8 @@ public class StateManager : MonoBehaviour
                 else GoToNextState();
             }
 
-            CurrentState.StateLogic();
+            if(CurrentState.Talking)
+                CurrentState.StateLogic();
         }
     }
 

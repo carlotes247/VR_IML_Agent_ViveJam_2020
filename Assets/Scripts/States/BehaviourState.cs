@@ -24,12 +24,19 @@ public class BehaviourState : MonoBehaviour
     {
         Talking = false;
         Debug.Log("Agent has stopped talking");
+        agentAnimator.SetLayerWeight(1, 0.1f);
+        //foreach (AnimationState state in agentAnimator)
+        //{
+        //    state.speed = 0F;
+        //}
     }
 
     public void ContinueTalking()
     {
         Talking = true;
         Debug.Log("Agent has started talking again");
+        agentAnimator.SetLayerWeight(1, 1f);
+
     }
 
 

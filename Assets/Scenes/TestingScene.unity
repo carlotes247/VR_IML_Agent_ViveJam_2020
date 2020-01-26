@@ -1016,7 +1016,7 @@ MonoBehaviour:
   NextState: {fileID: 827842537}
   LowScoreNextState: {fileID: 827842537}
   Talking: 0
-  InMidState: 0
+  InMidState: 1
   DebugMessage: description
 --- !u!4 &1510913423
 Transform:
@@ -1085,8 +1085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: {fileID: 1337594932}
-  CurrentScore: 0
-  LowScoreStreshold: 0
+  CurrentScore: 0.2
+  LowScoreStreshold: 0.5
 --- !u!1 &1933036037
 GameObject:
   m_ObjectHideFlags: 0
