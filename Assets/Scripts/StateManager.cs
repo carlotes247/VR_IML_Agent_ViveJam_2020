@@ -20,19 +20,26 @@ public class StateManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {           
             if (CurrentState.InMidState)
-            {   //if the score is low and the agent is not towards the end of the current state, than it stops talking
+               //if the score is low and the agent is not towards the end of the current state, than it stops talking
                 if (CurrentScore < LowScoreStreshold) CurrentState.StopTalking();
-                //if the agent was not talking and the score is higher or equal to the threshold, than continue talking from where it left
-                if (!CurrentState.Talking && CurrentScore >= LowScoreStreshold) CurrentState.ContinueTalking();
-            }else
+
+            if (CurrentState.Talking)
             {
-                //just making sure the talking is true
-                CurrentState.Talking = true;
+                //just making sure the talking is true               
                 if (CurrentScore < LowScoreStreshold) GoToLowScoreNextState();
                 else GoToNextState();
-            }
 
-            CurrentState.StateLogic();
+                CurrentState.StateLogic();
+
+            }
+            //if the agent was not talking and the score is higher or equal to the threshold, than continue talking from where it left
+            if (!CurrentState.Talking && CurrentScore >= LowScoreStreshold)
+                CurrentState.ContinueTalking();
+               
+
+
+            //if (CurrentState.Talking)
+            //    CurrentState.StateLogic();
         }
     }
 
