@@ -10,6 +10,7 @@ public class SurpriseState : BehaviourState
 
     public override void StateLogic()
     {
+        maxTime = 20;
         Debug.Log(DebugMessage); 
         agentAnimator.SetTrigger("01Surprise");
         //AgentGazeIKScript.updateObjLookAt()
