@@ -12,36 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8e1e2d4383d9e4081fe3bdfd1bfed4, type: 3}
   m_Name: Test_Eye_Tracking
   m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 2419611057869768065}
+  nodes: []
   SceneComponent: {fileID: 0}
---- !u!114 &2419611057869768065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43fc602e16b045142bc5c26d2ce145a6, type: 3}
-  m_Name: Game Object
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -632, y: -184}
-  ports:
-    keys:
-    - GameObjectFromScene
-    values:
-    - _fieldName: GameObjectFromScene
-      _node: {fileID: 2419611057869768065}
-      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  DevMode: 0
-  GameObjectFromScene: {fileID: 0}
-  GameObjMissing: 1
