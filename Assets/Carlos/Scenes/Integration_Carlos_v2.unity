@@ -2064,6 +2064,11 @@ MonoBehaviour:
     GestureExpectedValue: -1
     GestureIMLOutputIndex: 1
   RewardAgent: 10
+  Lights:
+  - {fileID: 313486488}
+  - {fileID: 987557335}
+  - {fileID: 2126115522}
+  - {fileID: 638304443}
 --- !u!114 &155702007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6420,7 +6425,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 302c1164e26a76149be05c806d518439,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 302c1164e26a76149be05c806d518439, type: 3}
@@ -8963,7 +8968,7 @@ MonoBehaviour:
   timer: 0
   maxTime: 0
   DebugMessage: description
-  PramAnimator: {fileID: 0}
+  PramAnimator: {fileID: 472863405}
 --- !u!4 &681124763
 Transform:
   m_ObjectHideFlags: 0
@@ -18847,6 +18852,7 @@ MonoBehaviour:
   Talking: 1
   AgentGazeIKScript: {fileID: 1127555997}
   LookAtObjectWhenSilenced: {fileID: 1879058891}
+  LightIntensity: 0
 --- !u!4 &1576350534
 Transform:
   m_ObjectHideFlags: 0
@@ -24290,13 +24296,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093805626}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.415, y: 2.669, z: -1.798}
+  m_LocalRotation: {x: 0.7732425, y: -0.062287062, z: -0.3821719, w: 0.50215644}
+  m_LocalPosition: {x: -10.415001, y: 2.669, z: -1.7979999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 926296835}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 46.8, y: -107.3, z: -135.46}
 --- !u!108 &2093805628
 Light:
   m_ObjectHideFlags: 0
@@ -24306,12 +24312,12 @@ Light:
   m_GameObject: {fileID: 2093805626}
   m_Enabled: 1
   serializedVersion: 9
-  m_Type: 2
+  m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.6
+  m_Intensity: 2.13
   m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_SpotAngle: 61
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0

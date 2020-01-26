@@ -34,6 +34,9 @@ public class IMLOutputToAgentPipe : MonoBehaviour
     [Header("Reward for Agent")]
     public float RewardAgent;
 
+    [Header("Light System")]
+    public Light[] Lights;
+
     // Update is called once per frame
     void Update()
     {
@@ -58,9 +61,13 @@ public class IMLOutputToAgentPipe : MonoBehaviour
                 // If not, then punish score
                 else
                 {
-                    if (AgentState.CurrentScore < 0f)
+                    if (AgentState.CurrentScore < 0.2f)
                     {
-                        AgentState.CurrentScore = 0f;
+                        AgentState.CurrentScore = 0.2f;
+                    }
+                    else if (AgentState.CurrentScore > 100f)
+                    {
+                        AgentState.CurrentScore = 100f;
                     }
                     else
                     {
@@ -68,8 +75,34 @@ public class IMLOutputToAgentPipe : MonoBehaviour
 
                     }
                 }
+
+                // Light piping
+                if (Lights != null && Lights.Length > 0)
+                {
+                    for (int i = 0; i < Lights.Length; i++)
+                    {
+
+                        Lights[i].intensity = AgentState.LightIntensity;
+                        //if (AgentState.CurrentScore > 20f)
+                        //{
+                        //    Lights[i].intensity = 1f;
+                        //}
+                        //else if (AgentState.CurrentScore < 0.3f)
+                        //{
+                        //    Lights[i].intensity = 0.3f;
+                        //}
+                        //else
+                        //{
+                        //    Lights[i].intensity = AgentState.CurrentScore * 0.05f;
+
+                        //}
+                    }
+                }
+
+
             }
-            
+
+
             // Override current score with value
             //AgentState.CurrentScore = ValueToSend;
         }

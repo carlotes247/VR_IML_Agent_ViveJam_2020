@@ -12,10 +12,12 @@ public class StateManager : MonoBehaviour
     //these are from when the user stop talking
     public AgentGazeIK AgentGazeIKScript;
     public GameObject LookAtObjectWhenSilenced;
+    public float LightIntensity;
 
     private void Start()
     {
         CurrentState.StateLogic();
+        LightIntensity = 0.3f;
     }
 
     private void Update()
@@ -32,11 +34,20 @@ public class StateManager : MonoBehaviour
             }
 
             if (Talking)
-            {                          
+            {
                 if (CurrentScore < LowScoreThreshold) GoToLowScoreNextState();
-                else GoToNextState();
+                else
+                {
+                    GoToNextState();
+                    LightIntensity += 0.08f;
+                    if (LightIntensity > 1f)
+                    {
+                        LightIntensity = 1f;
+                    }
+                }
 
                 CurrentState.StateLogic();
+
             }
 
             //if the agent was not talking and the score is higher or equal to the threshold, than continue talking from where it left and shifts the gaze to the player
