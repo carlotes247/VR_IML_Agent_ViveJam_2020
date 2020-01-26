@@ -23373,7 +23373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: {fileID: 1079440174}
-  CurrentScore: 0.2
+  CurrentScore: 0.5
   LowScoreThreshold: 0.3
   Talking: 1
   AgentGazeIKScript: {fileID: 1976465732}
