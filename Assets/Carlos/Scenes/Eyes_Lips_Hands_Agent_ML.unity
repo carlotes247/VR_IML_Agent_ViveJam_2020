@@ -1881,10 +1881,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentState: {fileID: 1922631021}
   CurrentScore: 0.2
-  LowScoreThreshold: 0.3
+  LowScoreThreshold: 20
   Talking: 1
   AgentGazeIKScript: {fileID: 1213138445}
-  LookAtObjectWhenSilenced: {fileID: 0}
+  LookAtObjectWhenSilenced: {fileID: 1772214799}
 --- !u!4 &604401450
 Transform:
   m_ObjectHideFlags: 0
@@ -2513,8 +2513,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 396149471}
-  m_Father: {fileID: 1804088876}
-  m_RootOrder: 0
+  m_Father: {fileID: 1902056341}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &705737217
 MonoBehaviour:
@@ -2991,13 +2991,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MLController: {fileID: 11400000, guid: cc27b79659face54fa57eea9c3f210a4, type: 2}
-  GameObjectsToUse: []
+  GameObjectsToUse:
+  - {fileID: 1804439356}
+  - {fileID: 1804455694}
+  - {fileID: 1902056336}
   TrainingExamplesNodesList:
   - {fileID: -4789966863600492424, guid: cc27b79659face54fa57eea9c3f210a4, type: 2}
   - {fileID: -8697439801625759254, guid: cc27b79659face54fa57eea9c3f210a4, type: 2}
+  - {fileID: -7297236317753175312, guid: cc27b79659face54fa57eea9c3f210a4, type: 2}
   IMLConfigurationNodesList:
   - {fileID: 8240335313252649488, guid: cc27b79659face54fa57eea9c3f210a4, type: 2}
   - {fileID: -2017589130068350235, guid: cc27b79659face54fa57eea9c3f210a4, type: 2}
+  - {fileID: -4890442624274708288, guid: cc27b79659face54fa57eea9c3f210a4, type: 2}
   FeaturesUpdated: 0
 --- !u!4 &884733042
 Transform:
@@ -5940,6 +5945,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770815368}
   m_CullTransparentMesh: 0
+--- !u!1 &1772214799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1094870102760074, guid: 52a2ca929ce44cb409714ebf1ead8332,
+    type: 3}
+  m_PrefabInstance: {fileID: 468672502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!92 &1795367564
 Behaviour:
   m_ObjectHideFlags: 0
@@ -6381,7 +6392,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 705737216}
   - {fileID: 1804140534}
   - {fileID: 1804138790}
   - {fileID: 1804129488}
@@ -6404,7 +6414,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1804088876}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1804111002
 Transform:
@@ -6480,7 +6490,7 @@ Transform:
   - {fileID: 1804088178}
   - {fileID: 1804168558}
   m_Father: {fileID: 1804088876}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1804134634
 Transform:
@@ -6512,7 +6522,7 @@ Transform:
   - {fileID: 1804163440}
   - {fileID: 1804202966}
   m_Father: {fileID: 1804088876}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1804140534
 Transform:
@@ -6526,7 +6536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1804088876}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1804153240
 Transform:
@@ -6540,7 +6550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1804088876}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1804162972
 Transform:
@@ -6958,7 +6968,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1804111600}
-  - component: {fileID: 1811068342}
   m_Layer: 0
   m_Name: FollowHead
   m_TagString: Untagged
@@ -7311,14 +7320,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!81 &1811068342
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804480758}
-  m_Enabled: 1
 --- !u!1 &1870853360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7512,8 +7513,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 80084165}
+  - {fileID: 705737216}
   m_Father: {fileID: 1804088876}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1902056342
 MonoBehaviour:
@@ -7687,6 +7689,20 @@ MonoBehaviour:
   MLComponent: {fileID: 884733041}
   AgentState: {fileID: 604401449}
   ValueToSend: 0
+  GestureVocab:
+  - GestureName: Wave Right Hand
+    GestureExpectedValue: 8
+    GestureIMLOutputIndex: 2
+  - GestureName: Eye Data [Not implemented]
+    GestureExpectedValue: 954
+    GestureIMLOutputIndex: 1
+  - GestureName: Smile
+    GestureExpectedValue: 15
+    GestureIMLOutputIndex: 0
+  - GestureName: Sad
+    GestureExpectedValue: -20
+    GestureIMLOutputIndex: 0
+  RewardAgent: 10
 --- !u!1 &1999803302
 GameObject:
   m_ObjectHideFlags: 0
@@ -9209,7 +9225,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1804088876}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000011102513324
 Transform:

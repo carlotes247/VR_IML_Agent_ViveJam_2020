@@ -4,6 +4,17 @@ using UnityEngine;
 using InteractML;
 
 /// <summary>
+/// Simple containing of gesture verbs
+/// </summary>
+[System.Serializable]
+public class GestureVerb
+{
+    public string GestureName;
+    public float GestureExpectedValue;
+    public int GestureIMLOutputIndex;
+}
+
+/// <summary>
 /// Pipes the output of an IML Controller into the Virtual Agent
 /// </summary>
 public class IMLOutputToAgentPipe : MonoBehaviour
@@ -17,6 +28,12 @@ public class IMLOutputToAgentPipe : MonoBehaviour
     [Header("Value Piped")]
     public float ValueToSend;
 
+    [Header("Gesture Vocabulary")]
+    public List<GestureVerb> GestureVocab;
+
+    [Header("Reward for Agent")]
+    public float RewardAgent;
+
     // Update is called once per frame
     void Update()
     {
@@ -28,8 +45,26 @@ public class IMLOutputToAgentPipe : MonoBehaviour
 
         if (AgentState)
         {
+            foreach (var gesture in GestureVocab)
+            {
+                // Get current value from model
+                float valueFromMLModel = (float)MLComponent.IMLControllerOutputs[gesture.GestureIMLOutputIndex][0];
+                // If the value is the same as the one in the model
+                if (ReusableMethods.Floats.nearlyEqual(gesture.GestureExpectedValue, valueFromMLModel, 0.05f))
+                {
+                    // Add reward to agent
+                    AgentState.CurrentScore += RewardAgent;
+                }
+                // If not, then punish score
+                else
+                {
+                    AgentState.CurrentScore -= RewardAgent / 4;
+                }
+            }
+            
             // Override current score with value
-            AgentState.CurrentScore = ValueToSend;
+            //AgentState.CurrentScore = ValueToSend;
         }
     }
+
 }
