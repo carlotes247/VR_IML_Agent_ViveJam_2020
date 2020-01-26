@@ -6,8 +6,8 @@ public class BehaviourState : MonoBehaviour
 {
     public BehaviourState NextState;
     public BehaviourState LowScoreNextState;
-    public bool Talking;
-    public bool InMidState;
+    public bool EndOfCurrentState;
+    public string AnimationClipName;
 
     protected Animator agentAnimator;
 
@@ -17,25 +17,37 @@ public class BehaviourState : MonoBehaviour
     }
     public virtual void StateLogic()
     {
-        //
+       //CheckEndOfState();
     }
 
     public void StopTalking()
     {
-        Talking = false;
+        //Talking = false;
         Debug.Log("Agent has stopped talking");
         agentAnimator.SetLayerWeight(1, 0.1f);
-        //foreach (AnimationState state in agentAnimator)
-        //{
-        //    state.speed = 0F;
-        //}
+
     }
 
     public void ContinueTalking()
     {
-        Talking = true;
+        //Talking = true;
         Debug.Log("Agent has started talking again");
         agentAnimator.SetLayerWeight(1, 1f);
+
+    }
+    // checks if it´s the end of the current state. At the end of the state, the clip will go into an idle clip
+    // if the current animation clip is named IDLE then the state can be changed. 
+    public bool CheckEndOfState()
+    {
+        string endOfStateName = "idle";
+        AnimatorStateInfo currentStateInfo;
+        currentStateInfo = agentAnimator.GetCurrentAnimatorStateInfo(1);//the active layer is at index 1 
+        //Access the Animation clip name
+        Debug.Log("clip name: " + currentStateInfo.IsName(endOfStateName));
+        return (currentStateInfo.IsName(endOfStateName));
+        //if (currentClipInfo[0].clip.name == endOfStateClipName) EndOfCurrentState = true;
+        //else EndOfCurrentState = false;
+
 
     }
 
