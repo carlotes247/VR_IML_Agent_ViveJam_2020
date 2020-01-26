@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.vr_ml_agent_vivejam2020.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\EVE London\\Documents\\Unity_Projects\\VR_ML_Agent_ViveJam2020\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "VR_ML_Agent_ViveJam2020 [Testing]"
+        }
+      }
+    }
+  ]
+}

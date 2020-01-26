@@ -473,6 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4d080d63801b345ba8cb761e2df9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DebugData: 0
 --- !u!4 &1742198736
 Transform:
   m_ObjectHideFlags: 0
@@ -691,6 +692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973119473}
+  - component: {fileID: 1973119474}
   m_Layer: 0
   m_Name: SensorToIMLPipe
   m_TagString: Untagged
@@ -712,6 +714,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1973119474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973119472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192dd99dcb2213e4eac67dbd00a0c2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LipSensor: {fileID: 1742198735}
+  EyesSensor: {fileID: 0}
+  MLComponent: {fileID: 884733041}
+  LipReadings: []
 --- !u!1 &1999803302
 GameObject:
   m_ObjectHideFlags: 0
