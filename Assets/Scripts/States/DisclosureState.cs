@@ -10,6 +10,7 @@ public class DisclosureState : BehaviourState
     public override void StateLogic()
     {
         Debug.Log(DebugMessage);
+        agentAnimator.SetTrigger("05Disclosure_high");
 
         base.StateLogic();
     }
