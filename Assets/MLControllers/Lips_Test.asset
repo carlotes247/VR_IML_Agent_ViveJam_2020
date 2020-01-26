@@ -1,5 +1,263 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8697439801625759254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951c4d4b1f5774e4889ccfa10aab7dc0, type: 3}
+  m_Name: Training Examples
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -328, y: 232}
+  ports:
+    keys:
+    - InputFeatures
+    - TrainingExamplesNodeToOutput
+    values:
+    - _fieldName: InputFeatures
+      _node: {fileID: -8697439801625759254}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.Node, XNode, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: floatExtracted
+        node: {fileID: 7986388353842646228}
+        reroutePoints: []
+      - fieldName: floatExtracted
+        node: {fileID: -1494146624066585072}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: TrainingExamplesNodeToOutput
+      _node: {fileID: -8697439801625759254}
+      _typeQualifiedName: InteractML.TrainingExamplesNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: IMLTrainingExamplesNodes
+        node: {fileID: -2017589130068350235}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  InputFeatures:
+  - {fileID: 7986388353842646228}
+  - {fileID: -1494146624066585072}
+  TrainingExamplesNodeToOutput: {fileID: -8697439801625759254}
+  ModeOfCollection: 0
+  TrainingExamplesVector: []
+  TrainingSeriesCollection: []
+  m_DesiredInputsConfig: 0000000000000000
+  m_DesiredOutputsConfig: 00000000
+  IMLConfigurationNodesConnected: []
+  StartDelay: 0
+  CaptureRate: 10
+  RecordTime: -1
+  EnableCollectDataShortcut: 0
+--- !u!114 &-8504596287838510589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad8b84fa1e1ffb4fb4145f15376e710, type: 3}
+  m_Name: Extract Vector 2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -888, y: 168}
+  ports:
+    keys:
+    - inputVector2
+    - vector2FeatureExtracted
+    values:
+    - _fieldName: inputVector2
+      _node: {fileID: -8504596287838510589}
+      _typeQualifiedName: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Vector2ToOutput
+        node: {fileID: -2425127250995515474}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: vector2FeatureExtracted
+      _node: {fileID: -8504596287838510589}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  inputVector2: {x: 0, y: 0}
+  vector2FeatureExtracted: {fileID: 0}
+--- !u!114 &-7801599515560987921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b516e76545beb34d8ff589c351c669d, type: 3}
+  m_Name: Realtime IML Output
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1320, y: 504}
+  ports:
+    keys:
+    - IMLModelOutputs
+    values:
+    - _fieldName: IMLModelOutputs
+      _node: {fileID: -7801599515560987921}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: ModelOutput
+        node: {fileID: -2017589130068350235}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  IMLModelOutputs: {fileID: 0}
+  m_IMLOutputVector:
+  - 0
+--- !u!114 &-7435921388335681091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffaa18ed98b0d942b9f429eb8ca06fb, type: 3}
+  m_Name: Extract Float
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -872, y: 920}
+  ports:
+    keys:
+    - inputFloat
+    - floatExtracted
+    values:
+    - _fieldName: inputFloat
+      _node: {fileID: -7435921388335681091}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: FloatToOutput
+        node: {fileID: 1093884996968173247}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: floatExtracted
+      _node: {fileID: -7435921388335681091}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  inputFloat: 0
+  floatExtracted: {fileID: 0}
+  m_FloatExtracted:
+    m_Values:
+    - -1
+--- !u!114 &-7169963055210760691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00534a0ab197c4d4580b7dc43b85d166, type: 3}
+  m_Name: EyeOpenLeft (Float Node)
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1224, y: 488}
+  ports:
+    keys:
+    - FloatToOutput
+    values:
+    - _fieldName: FloatToOutput
+      _node: {fileID: -7169963055210760691}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: inputFloat
+        node: {fileID: 7986388353842646228}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  Value: 1
+  FloatToOutput: 1
+  ValueName: EyeOpenLeft
+--- !u!114 &-5894038345745839375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad8b84fa1e1ffb4fb4145f15376e710, type: 3}
+  m_Name: Extract Vector 2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -888, y: 328}
+  ports:
+    keys:
+    - inputVector2
+    - vector2FeatureExtracted
+    values:
+    - _fieldName: inputVector2
+      _node: {fileID: -5894038345745839375}
+      _typeQualifiedName: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Vector2ToOutput
+        node: {fileID: 5513898216889290579}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: vector2FeatureExtracted
+      _node: {fileID: -5894038345745839375}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  inputVector2: {x: 0, y: 0}
+  vector2FeatureExtracted: {fileID: 0}
 --- !u!114 &-5230735152729629913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,7 +271,7 @@ MonoBehaviour:
   m_Name: Extract Serial Vector
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -792, y: -488}
+  position: {x: -792, y: -616}
   ports:
     keys:
     - inputSerialVector
@@ -41,8 +299,8 @@ MonoBehaviour:
       - fieldName: InputFeatures
         node: {fileID: 8240335313252649488}
         reroutePoints:
-        - {x: -383.68567, y: 191.35338}
-        - {x: 163.00609, y: 232.06447}
+        - {x: -320, y: -160}
+        - {x: 48, y: -112}
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -52,33 +310,33 @@ MonoBehaviour:
   serialVectorFeatureExtracted: {fileID: 0}
   m_arrayExtracted:
     m_Values:
-    - 1.910089e-37
-    - 0.108462274
-    - 8.5794666e-35
-    - 0.83366144
-    - 1.0470676e-27
-    - 0.7973861
-    - 0.038299777
-    - 0.49784106
-    - 6.036435e-33
-    - 0
-    - 0
-    - 1e-45
-    - 1e-45
     - 0
     - 0
     - 0
-    - 1e-45
-    - 9.38676e-34
     - 0
     - 0
     - 0
-    - 1.3117836e-33
-    - 0.29577827
-    - 0.2573899
-    - 0.27541268
-    - 6.4170016e-33
-    - 0.5632737
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
 --- !u!114 &-4789966863600492424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +350,7 @@ MonoBehaviour:
   m_Name: Training Examples
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -344, y: -440}
+  position: {x: -296, y: -712}
   ports:
     keys:
     - InputFeatures
@@ -136,7 +394,7 @@ MonoBehaviour:
   StartDelay: 0
   CaptureRate: 10
   RecordTime: -1
-  EnableCollectDataShortcut: 1
+  EnableCollectDataShortcut: 0
 --- !u!114 &-4350197932694092035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +408,7 @@ MonoBehaviour:
   m_Name: LipReadings (Serial Vector Node)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1272, y: -536}
+  position: {x: -1368, y: -776}
   ports:
     keys:
     - arrayToOutput
@@ -169,62 +427,244 @@ MonoBehaviour:
       _dynamic: 0
   DevMode: 0
   Value:
-  - 9.550445e-38
-  - 0.11686774
-  - 4.2897333e-35
-  - 0.83717
-  - 5.235338e-28
-  - 0.78186214
-  - 0.031518225
-  - 0.49943987
-  - 3.0182175e-33
-  - 0
-  - 0
-  - 1e-45
-  - 1e-45
   - 0
   - 0
   - 0
-  - 1e-45
-  - 4.69338e-34
   - 0
   - 0
   - 0
-  - 6.558918e-34
-  - 0.28511646
-  - 0.24707207
-  - 0.2763272
-  - 3.2085008e-33
-  - 0.5851718
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   arrayToOutput:
-  - 9.550445e-38
-  - 0.11686774
-  - 4.2897333e-35
-  - 0.83717
-  - 5.235338e-28
-  - 0.78186214
-  - 0.031518225
-  - 0.49943987
-  - 3.0182175e-33
-  - 0
-  - 0
-  - 1e-45
-  - 1e-45
   - 0
   - 0
   - 0
-  - 1e-45
-  - 4.69338e-34
   - 0
   - 0
   - 0
-  - 6.558918e-34
-  - 0.28511646
-  - 0.24707207
-  - 0.2763272
-  - 3.2085008e-33
-  - 0.5851718
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   ValueName: LipReadings
+--- !u!114 &-2557407380475816141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00534a0ab197c4d4580b7dc43b85d166, type: 3}
+  m_Name: EyeOpenRight (Float Node)
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1224, y: 632}
+  ports:
+    keys:
+    - FloatToOutput
+    values:
+    - _fieldName: FloatToOutput
+      _node: {fileID: -2557407380475816141}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: inputFloat
+        node: {fileID: -1494146624066585072}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  Value: 1
+  FloatToOutput: 1
+  ValueName: EyeOpenRight
+--- !u!114 &-2425127250995515474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ce357579833a349823c2b8eb63e23a, type: 3}
+  m_Name: PupilPositionLeft (Vector2 Node)
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: 200}
+  ports:
+    keys:
+    - Vector2ToOutput
+    values:
+    - _fieldName: Vector2ToOutput
+      _node: {fileID: -2425127250995515474}
+      _typeQualifiedName: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: inputVector2
+        node: {fileID: -8504596287838510589}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  Value: {x: -1, y: -1}
+  Vector2ToOutput: {x: -1, y: -1}
+  ValueName: PupilPositionLeft
+--- !u!114 &-2017589130068350235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21cbf9d5f90a6a749bf70593dd60aa10, type: 3}
+  m_Name: IML Configuration
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 680.21545, y: 416.23434}
+  ports:
+    keys:
+    - IMLTrainingExamplesNodes
+    - InputFeatures
+    - ModelOutput
+    values:
+    - _fieldName: IMLTrainingExamplesNodes
+      _node: {fileID: -2017589130068350235}
+      _typeQualifiedName: System.Collections.Generic.List`1[[InteractML.TrainingExamplesNode,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: TrainingExamplesNodeToOutput
+        node: {fileID: -8697439801625759254}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: InputFeatures
+      _node: {fileID: -2017589130068350235}
+      _typeQualifiedName: System.Collections.Generic.List`1[[XNode.Node, XNode, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: floatExtracted
+        node: {fileID: 7986388353842646228}
+        reroutePoints: []
+      - fieldName: floatExtracted
+        node: {fileID: -1494146624066585072}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: ModelOutput
+      _node: {fileID: -2017589130068350235}
+      _typeQualifiedName: InteractML.IMLConfiguration, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: IMLModelOutputs
+        node: {fileID: -7801599515560987921}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  IMLTrainingExamplesNodes:
+  - {fileID: -8697439801625759254}
+  InputFeatures:
+  - {fileID: 7986388353842646228}
+  - {fileID: -1494146624066585072}
+  ModelOutput: {fileID: 0}
+  KeyboardControl: 0
+  TrainingKey: 0
+  RunningKey: 0
+  PredictedRapidlibOutput:
+  - 0
+  DelayedPredictedOutput:
+  - 5
+  m_ExpectedInputList: 0000000000000000
+  m_ExpectedOutputList: 00000000
+  m_LearningType: 0
+  TrainOnPlaymodeChange: 0
+  RunOnAwake: 0
+--- !u!114 &-1946925157119332395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00534a0ab197c4d4580b7dc43b85d166, type: 3}
+  m_Name: PupilDiameterLeft (Float Node)
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1240, y: 776}
+  ports:
+    keys:
+    - FloatToOutput
+    values:
+    - _fieldName: FloatToOutput
+      _node: {fileID: -1946925157119332395}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: inputFloat
+        node: {fileID: -61535504617920174}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  Value: -1
+  FloatToOutput: -1
+  ValueName: PupilDiameterLeft
 --- !u!114 &-1582970655957511384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +678,7 @@ MonoBehaviour:
   m_Name: Realtime IML Output
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 952, y: -280}
+  position: {x: 952, y: -472}
   ports:
     keys:
     - IMLModelOutputs
@@ -258,6 +698,104 @@ MonoBehaviour:
   IMLModelOutputs: {fileID: 0}
   m_IMLOutputVector:
   - 0
+--- !u!114 &-1494146624066585072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffaa18ed98b0d942b9f429eb8ca06fb, type: 3}
+  m_Name: Extract Float
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -872, y: 632}
+  ports:
+    keys:
+    - inputFloat
+    - floatExtracted
+    values:
+    - _fieldName: inputFloat
+      _node: {fileID: -1494146624066585072}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: FloatToOutput
+        node: {fileID: -2557407380475816141}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: floatExtracted
+      _node: {fileID: -1494146624066585072}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: InputFeatures
+        node: {fileID: -8697439801625759254}
+        reroutePoints: []
+      - fieldName: InputFeatures
+        node: {fileID: -2017589130068350235}
+        reroutePoints:
+        - {x: -320.75565, y: 876.12775}
+        - {x: 321.67303, y: 852.3341}
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  inputFloat: 0
+  floatExtracted: {fileID: 0}
+  m_FloatExtracted:
+    m_Values:
+    - 1
+--- !u!114 &-61535504617920174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffaa18ed98b0d942b9f429eb8ca06fb, type: 3}
+  m_Name: Extract Float
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -872, y: 776}
+  ports:
+    keys:
+    - inputFloat
+    - floatExtracted
+    values:
+    - _fieldName: inputFloat
+      _node: {fileID: -61535504617920174}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: FloatToOutput
+        node: {fileID: -1946925157119332395}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: floatExtracted
+      _node: {fileID: -61535504617920174}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  inputFloat: 0
+  floatExtracted: {fileID: 0}
+  m_FloatExtracted:
+    m_Values:
+    - -1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +814,167 @@ MonoBehaviour:
   - {fileID: -1582970655957511384}
   - {fileID: -4350197932694092035}
   - {fileID: -5230735152729629913}
+  - {fileID: -1946925157119332395}
+  - {fileID: 1093884996968173247}
+  - {fileID: -2425127250995515474}
+  - {fileID: 5513898216889290579}
+  - {fileID: -7169963055210760691}
+  - {fileID: -2557407380475816141}
+  - {fileID: -8504596287838510589}
+  - {fileID: -5894038345745839375}
+  - {fileID: 7986388353842646228}
+  - {fileID: -1494146624066585072}
+  - {fileID: -61535504617920174}
+  - {fileID: -7435921388335681091}
+  - {fileID: -8697439801625759254}
+  - {fileID: -2017589130068350235}
+  - {fileID: 8849909080294176307}
+  - {fileID: 5932157540164908367}
+  - {fileID: -7801599515560987921}
   SceneComponent: {fileID: 0}
+--- !u!114 &1093884996968173247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00534a0ab197c4d4580b7dc43b85d166, type: 3}
+  m_Name: PupilDiameterRight (Float Node)
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1240, y: 888}
+  ports:
+    keys:
+    - FloatToOutput
+    values:
+    - _fieldName: FloatToOutput
+      _node: {fileID: 1093884996968173247}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: inputFloat
+        node: {fileID: -7435921388335681091}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  Value: -1
+  FloatToOutput: -1
+  ValueName: PupilDiameterRight
+--- !u!114 &5513898216889290579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ce357579833a349823c2b8eb63e23a, type: 3}
+  m_Name: PupilPositionRight (Vector2 Node)
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: 328}
+  ports:
+    keys:
+    - Vector2ToOutput
+    values:
+    - _fieldName: Vector2ToOutput
+      _node: {fileID: 5513898216889290579}
+      _typeQualifiedName: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: inputVector2
+        node: {fileID: -5894038345745839375}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  Value: {x: -1, y: -1}
+  Vector2ToOutput: {x: -1, y: -1}
+  ValueName: PupilPositionRight
+--- !u!114 &5932157540164908367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137e83599788d424eb27a7264acd4b03, type: 3}
+  m_Name: Text Note
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: -8}
+  ports:
+    keys: []
+    values: []
+  DevMode: 0
+  note: 'EYE DATA
+
+
+'
+--- !u!114 &7986388353842646228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffaa18ed98b0d942b9f429eb8ca06fb, type: 3}
+  m_Name: Extract Float
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -888, y: 472}
+  ports:
+    keys:
+    - inputFloat
+    - floatExtracted
+    values:
+    - _fieldName: inputFloat
+      _node: {fileID: 7986388353842646228}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: FloatToOutput
+        node: {fileID: -7169963055210760691}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: floatExtracted
+      _node: {fileID: 7986388353842646228}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: InputFeatures
+        node: {fileID: -8697439801625759254}
+        reroutePoints: []
+      - fieldName: InputFeatures
+        node: {fileID: -2017589130068350235}
+        reroutePoints:
+        - {x: -305.6863, y: 785.7119}
+        - {x: 307.39682, y: 766.67694}
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  inputFloat: 0
+  floatExtracted: {fileID: 0}
+  m_FloatExtracted:
+    m_Values:
+    - 1
 --- !u!114 &8240335313252649488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,9 +1044,32 @@ MonoBehaviour:
   RunningKey: 0
   PredictedRapidlibOutput:
   - 0
-  DelayedPredictedOutput: []
+  DelayedPredictedOutput:
+  - 15
   m_ExpectedInputList: 05000000
   m_ExpectedOutputList: 00000000
   m_LearningType: 0
   TrainOnPlaymodeChange: 0
   RunOnAwake: 0
+--- !u!114 &8849909080294176307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137e83599788d424eb27a7264acd4b03, type: 3}
+  m_Name: Text Note
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1368, y: -904}
+  ports:
+    keys: []
+    values: []
+  DevMode: 0
+  note: 'LIP DATA
+
+
+'

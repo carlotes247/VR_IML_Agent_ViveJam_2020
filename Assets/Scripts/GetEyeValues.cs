@@ -19,10 +19,14 @@ public class GetEyeValues : MonoBehaviour
 
     private float l_openess, r_openess;
     private static VerboseData verboseData;
-    private float pupilDiameterLeft, pupilDiameterRight;
-    private Vector2 pupilPositionLeft, pupilPositionRight;
+    public float pupilDiameterLeft, pupilDiameterRight;
+    public Vector2 pupilPositionLeft, pupilPositionRight;
 
-    private float eyeOpenLeft, eyeOpenRight;
+    public float eyeOpenLeft, eyeOpenRight;
+
+    [Header("Options")]
+    public bool DebugData;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,11 +63,11 @@ public class GetEyeValues : MonoBehaviour
         UpdateEyeOpen();
         UpdatePupilPosition();
 
-
-        Debug.Log("pupilDiameterRight: " + pupilDiameterRight + " pupilPositionRight: " + pupilPositionRight + " eyeOpenRight: " + eyeOpenRight);
-        Debug.Log("pupilDiameterLeft: " + pupilDiameterLeft + " pupilPositionLeft: " + pupilPositionLeft + " eyeOpenLeft: " + eyeOpenLeft);
-
-
+        if (DebugData)
+        {
+            Debug.Log("pupilDiameterRight: " + pupilDiameterRight + " pupilPositionRight: " + pupilPositionRight + " eyeOpenRight: " + eyeOpenRight);
+            Debug.Log("pupilDiameterLeft: " + pupilDiameterLeft + " pupilPositionLeft: " + pupilPositionLeft + " eyeOpenLeft: " + eyeOpenLeft);
+        }
 
     }
 
