@@ -1298,12 +1298,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 108463351}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &109831868 stripped
+--- !u!1 &109831868
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: fb6c076d8dd47ba4995ca18cab9e3f6b,
     type: 3}
   m_PrefabInstance: {fileID: 731847836}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109831870}
+  - component: {fileID: 109831869}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!95 &109831869
 Animator:
   serializedVersion: 3
@@ -1323,6 +1335,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &109831870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 731847836}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109831868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1714148274}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &130452326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2032,7 +2058,7 @@ Transform:
   m_Children:
   - {fileID: 1093953413}
   - {fileID: 577615248}
-  - {fileID: 997941625}
+  - {fileID: 1714148274}
   m_Father: {fileID: 1986744366}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2975,6 +3001,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257074822}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &263165761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 731847836}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997941625}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &270004428
 GameObject:
   m_ObjectHideFlags: 0
@@ -11936,12 +11978,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 997738937}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &997941625 stripped
+--- !u!4 &997941625
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: fb6c076d8dd47ba4995ca18cab9e3f6b,
     type: 3}
   m_PrefabInstance: {fileID: 731847836}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263165761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1714148274}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000815331
 GameObject:
   m_ObjectHideFlags: 0
@@ -19782,6 +19833,38 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1712623482}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1714148273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 731847836}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714148274}
+  m_Layer: 0
+  m_Name: Bus (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1714148274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 731847836}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714148273}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 109831870}
+  - {fileID: 997941625}
+  m_Father: {fileID: 161263710}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725467982
 GameObject:
   m_ObjectHideFlags: 0
@@ -23373,7 +23456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: {fileID: 1079440174}
-  CurrentScore: 0.2
+  CurrentScore: 0.6
   LowScoreThreshold: 0.3
   Talking: 1
   AgentGazeIKScript: {fileID: 1976465732}
