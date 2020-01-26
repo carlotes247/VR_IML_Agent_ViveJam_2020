@@ -249,7 +249,7 @@ MonoBehaviour:
   InputFeatures:
   - {fileID: 2213579486959961248}
   TrainingExamplesNodeToOutput: {fileID: -7297236317753175312}
-  ModeOfCollection: 1
+  ModeOfCollection: 0
   TrainingExamplesVector: []
   TrainingSeriesCollection: []
   m_DesiredInputsConfig: 05000000
@@ -559,7 +559,7 @@ MonoBehaviour:
   - 0
   m_ExpectedInputList: 05000000
   m_ExpectedOutputList: 00000000
-  m_LearningType: 2
+  m_LearningType: 0
   TrainOnPlaymodeChange: 0
   RunOnAwake: 0
 --- !u!114 &-4789966863600492424
@@ -1526,7 +1526,7 @@ MonoBehaviour:
   InputFeatures:
   - {fileID: -5230735152729629913}
   ModelOutput: {fileID: 0}
-  KeyboardControl: 1
+  KeyboardControl: 0
   TrainingKey: 0
   RunningKey: 0
   PredictedRapidlibOutput:
