@@ -131,8 +131,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: shortIdle
-  m_Speed: 1
+  m_Name: weighshift
+  m_Speed: 0.9
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3123996743867925724}
@@ -145,7 +145,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 52e786b51b2efc542ad20a1cb2036a1e, type: 3}
+  m_Motion: {fileID: 7400000, guid: 0da05d0cfab971d44ad852f5aaeb535d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -372,16 +372,16 @@ AnimatorStateMachine:
   - {fileID: 4675231061425486020}
   m_EntryTransitions: []
   m_StateMachineTransitions:
+  - first: {fileID: 1465982098187875619}
+    second:
+    - {fileID: -5787733962133508752}
+  - first: {fileID: -3579396273538907541}
+    second:
+    - {fileID: 2539805976031563876}
   - first: {fileID: -4427022419843351771}
     second: []
   - first: {fileID: -4102840714877199154}
     second: []
-  - first: {fileID: -3579396273538907541}
-    second:
-    - {fileID: 2539805976031563876}
-  - first: {fileID: 1465982098187875619}
-    second:
-    - {fileID: -5787733962133508752}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 440, y: 200, z: 0}
   m_EntryPosition: {x: -530, y: 60, z: 0}
