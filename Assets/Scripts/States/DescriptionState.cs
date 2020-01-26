@@ -6,6 +6,8 @@ public class DescriptionState : BehaviourState
 {
     public string DebugMessage;
     public Animator PramAnimator;
+    public AudioClip secondClip;
+
 
     public override void StateLogic()
     {

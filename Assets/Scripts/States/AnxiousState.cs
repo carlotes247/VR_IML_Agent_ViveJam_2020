@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnxiousState : BehaviourState
 {
     public string DebugMessage;
-
+    public AudioClip secondClip;
 
     public override void StateLogic()
     {

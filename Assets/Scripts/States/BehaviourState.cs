@@ -7,6 +7,7 @@ public class BehaviourState : MonoBehaviour
     public BehaviourState NextState;
     public BehaviourState LowScoreNextState;
     public string AnimationClipName;
+    public AudioClip mainClip;
     public float timer;
     public float maxTime;
 
