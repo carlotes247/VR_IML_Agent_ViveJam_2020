@@ -5493,12 +5493,11 @@ MonoBehaviour:
   NextState: {fileID: 1190672386}
   LowScoreNextState: {fileID: 1190672386}
   AnimationClipName: 
-  mainClip: {fileID: 8300000, guid: f2392ff318900564f93b08a828a67a2d, type: 3}
+  mainClip: {fileID: 8300000, guid: 54c4faa3e926557438d99a9168f7af10, type: 3}
   timer: 0
   maxTime: 0
   DebugMessage: description
   PramAnimator: {fileID: 1208455626}
-  secondClip: {fileID: 8300000, guid: df47e55e85a1caf448e950ed01a67f8a, type: 3}
 --- !u!4 &461600107
 Transform:
   m_ObjectHideFlags: 0
@@ -22439,7 +22438,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4ad9d5ada9b693b47a1e0e3237d49b37, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -23862,11 +23861,10 @@ MonoBehaviour:
   NextState: {fileID: 1921117467}
   LowScoreNextState: {fileID: 1764975558}
   AnimationClipName: 
-  mainClip: {fileID: 8300000, guid: 8a6c6adec1b15d645b0cc8893a13b0dc, type: 3}
+  mainClip: {fileID: 8300000, guid: 3952681a846024740974a52782b95d42, type: 3}
   timer: 0
   maxTime: 0
   DebugMessage: anxious_low
-  secondClip: {fileID: 8300000, guid: 61d436adda70e0c4e8f87284a21edcf6, type: 3}
 --- !u!4 &2079087299
 Transform:
   m_ObjectHideFlags: 0

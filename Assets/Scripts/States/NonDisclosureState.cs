@@ -8,7 +8,7 @@ public class NonDisclosureState : BehaviourState
     public Animator BusAnimator;
 
     public override void StateLogic()
-    {
+    {   
         Debug.Log(DebugMessage);
         agentAnimator.SetTrigger("05NonDisclosure_low");
         if (BusAnimator != null)
