@@ -773,8 +773,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
-  Value: {x: 0, y: 0}
-  Vector2ToOutput: {x: 0, y: 0}
+  Value: {x: 0.5449515, y: 0.44006452}
+  Vector2ToOutput: {x: 0.5449515, y: 0.44006452}
   ValueName: PupilPositionLeft
 --- !u!114 &-2017589130068350235
 MonoBehaviour:
@@ -1308,8 +1308,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
-  Value: {x: 0, y: 0}
-  Vector2ToOutput: {x: 0, y: 0}
+  Value: {x: 0.48842484, y: 0.39869487}
+  Vector2ToOutput: {x: 0.48842484, y: 0.39869487}
   ValueName: PupilPositionRight
 --- !u!114 &5932157540164908367
 MonoBehaviour:

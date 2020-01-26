@@ -7,20 +7,26 @@ public class BehaviourState : MonoBehaviour
     public BehaviourState NextState;
     public BehaviourState LowScoreNextState;
     public string AnimationClipName;
+    public AudioClip mainClip;
     public float timer;
     public float maxTime;
 
+    private AudioSource MonologueAudioSource;
     protected Animator agentAnimator;
 
     private void Awake()
     {
         agentAnimator = GameObject.Find("AgentFemale").GetComponent<Animator>();
-        maxTime = 10;//default is 10
+        maxTime = mainClip.length;//default is 10
+        MonologueAudioSource = GameObject.Find("Monologue").GetComponent<AudioSource>();
+
     }
     public virtual void StateLogic()
     {
         //CheckEndOfState();
         timer = 0;
+        MonologueAudioSource.clip = mainClip;
+        MonologueAudioSource.Play();
         //int seconds = timer % 60;
     }
 

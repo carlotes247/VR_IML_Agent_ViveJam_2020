@@ -6,7 +6,6 @@ public class AnxiousState : BehaviourState
 {
     public string DebugMessage;
 
-
     public override void StateLogic()
     {
         Debug.Log(DebugMessage);
