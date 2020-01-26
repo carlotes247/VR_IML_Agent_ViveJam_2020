@@ -584,16 +584,48 @@ namespace InteractML
                             // Secondly, we create a node (based on its type) for this fieldInfo and add it to the dictionary
                             if (fieldToUse.FieldType == typeof(Single))
                             {
-                                // Create a Float node into the graph
-                                DataTypeNodes.FloatNode floatNode = MLController.AddNode<DataTypeNodes.FloatNode>();
-                                floatNode.Value = (float)fieldToUse.GetValue(gameComponent);
-                                floatNode.ValueName = fieldToUse.Name;
-                                floatNode.name = fieldToUse.Name + " (Float Node)";
+                                DataTypeNodes.FloatNode newNode = null;
+                                // First, we try and see if the graph already contains a node we can use
+                                foreach (var node in MLController.nodes)
+                                {
+                                    // We see if this node is of the right type
+                                    if (node.GetType() == typeof(DataTypeNodes.FloatNode))
+                                    {
+                                        // We check if the node is available to use
+                                        var isTaken = m_DataContainersPerFieldInfo.Values.Any(container => container.nodeForField == node);
+                                        // If the node is not taken...
+                                        if (!isTaken)
+                                        {
+                                            // This will be our node!
+                                            newNode = (DataTypeNodes.FloatNode)node;
+                                            // Stop searching for nodes
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                // If we didn't find a suitable existing node...
+                                if (newNode == null)
+                                {
+                                    // Create a new Serial Vector node into the graph
+                                    newNode = MLController.AddNode<DataTypeNodes.FloatNode>();
+                                    // Save newnode to graph on disk                              
+                                    AssetDatabase.AddObjectToAsset(newNode, MLController);
+                                    // Reload graph into memory since we have modified it on disk
+                                    AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(MLController));
+
+                                }
+
+                                // Configure our node appropiately
+                                newNode.Value = (float)fieldToUse.GetValue(gameComponent);
+                                newNode.ValueName = fieldToUse.Name;
+                                newNode.name = fieldToUse.Name + " (Float Node)";
 
                                 // Add all info to a container
-                                IMLFieldInfoContainer infoContainer = new IMLFieldInfoContainer(fieldToUse, floatNode, IMLSpecifications.DataTypes.Float, gameComponent);
+                                IMLFieldInfoContainer infoContainer = new IMLFieldInfoContainer(fieldToUse, newNode, IMLSpecifications.DataTypes.Float, gameComponent);
                                 // Add that to the dictionary
                                 m_DataContainersPerFieldInfo.Add(fieldToUse, infoContainer);
+
                             }
                             else if (fieldToUse.FieldType == typeof(Int32))
                             {
@@ -611,8 +643,39 @@ namespace InteractML
                             }
                             else if (fieldToUse.FieldType == typeof(Vector2))
                             {
-                                // Create a Vector2 node into the graph
-                                DataTypeNodes.Vector2Node newNode = MLController.AddNode<DataTypeNodes.Vector2Node>();
+                                DataTypeNodes.Vector2Node newNode = null;
+                                // First, we try and see if the graph already contains a node we can use
+                                foreach (var node in MLController.nodes)
+                                {
+                                    // We see if this node is of the right type
+                                    if (node.GetType() == typeof(DataTypeNodes.Vector2Node))
+                                    {
+                                        // We check if the node is available to use
+                                        var isTaken = m_DataContainersPerFieldInfo.Values.Any(container => container.nodeForField == node);
+                                        // If the node is not taken...
+                                        if (!isTaken)
+                                        {
+                                            // This will be our node!
+                                            newNode = (DataTypeNodes.Vector2Node)node;
+                                            // Stop searching for nodes
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                // If we didn't find a suitable existing node...
+                                if (newNode == null)
+                                {
+                                    // Create a new Serial Vector node into the graph
+                                    newNode = MLController.AddNode<DataTypeNodes.Vector2Node>();
+                                    // Save newnode to graph on disk                              
+                                    AssetDatabase.AddObjectToAsset(newNode, MLController);
+                                    // Reload graph into memory since we have modified it on disk
+                                    AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(MLController));
+
+                                }
+
+                                // Configure our node appropiately
                                 newNode.Value = (Vector2)fieldToUse.GetValue(gameComponent);
                                 newNode.ValueName = fieldToUse.Name;
                                 newNode.name = fieldToUse.Name + " (Vector2 Node)";
