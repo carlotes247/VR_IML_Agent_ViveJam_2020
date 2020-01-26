@@ -1,5 +1,84 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5230735152729629913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa26b9bf44c7af5408f0b4f72a5f0925, type: 3}
+  m_Name: Extract Serial Vector
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -792, y: -488}
+  ports:
+    keys:
+    - inputSerialVector
+    - serialVectorFeatureExtracted
+    values:
+    - _fieldName: inputSerialVector
+      _node: {fileID: -5230735152729629913}
+      _typeQualifiedName: System.Single[], mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: arrayToOutput
+        node: {fileID: -4350197932694092035}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: serialVectorFeatureExtracted
+      _node: {fileID: -5230735152729629913}
+      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: InputFeatures
+        node: {fileID: -4789966863600492424}
+        reroutePoints: []
+      - fieldName: InputFeatures
+        node: {fileID: 8240335313252649488}
+        reroutePoints:
+        - {x: -383.68567, y: 191.35338}
+        - {x: 163.00609, y: 232.06447}
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  DevMode: 0
+  inputSerialVector: []
+  serialVectorFeatureExtracted: {fileID: 0}
+  m_arrayExtracted:
+    m_Values:
+    - 1.910089e-37
+    - 0.108462274
+    - 8.5794666e-35
+    - 0.83366144
+    - 1.0470676e-27
+    - 0.7973861
+    - 0.038299777
+    - 0.49784106
+    - 6.036435e-33
+    - 0
+    - 0
+    - 1e-45
+    - 1e-45
+    - 0
+    - 0
+    - 0
+    - 1e-45
+    - 9.38676e-34
+    - 0
+    - 0
+    - 0
+    - 1.3117836e-33
+    - 0.29577827
+    - 0.2573899
+    - 0.27541268
+    - 6.4170016e-33
+    - 0.5632737
 --- !u!114 &-4789966863600492424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25,8 +104,8 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
-      - fieldName: floatExtracted
-        node: {fileID: 1344032641873333808}
+      - fieldName: serialVectorFeatureExtracted
+        node: {fileID: -5230735152729629913}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -46,18 +125,18 @@ MonoBehaviour:
       _dynamic: 0
   DevMode: 0
   InputFeatures:
-  - {fileID: 1344032641873333808}
+  - {fileID: -5230735152729629913}
   TrainingExamplesNodeToOutput: {fileID: -4789966863600492424}
   ModeOfCollection: 0
   TrainingExamplesVector: []
   TrainingSeriesCollection: []
-  m_DesiredInputsConfig: 00000000
+  m_DesiredInputsConfig: 05000000
   m_DesiredOutputsConfig: 00000000
   IMLConfigurationNodesConnected: []
   StartDelay: 0
   CaptureRate: 10
   RecordTime: -1
-  EnableCollectDataShortcut: 0
+  EnableCollectDataShortcut: 1
 --- !u!114 &-4350197932694092035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +150,7 @@ MonoBehaviour:
   m_Name: LipReadings (Serial Vector Node)
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -136, y: 136}
+  position: {x: -1272, y: -536}
   ports:
     keys:
     - arrayToOutput
@@ -80,41 +159,71 @@ MonoBehaviour:
       _node: {fileID: -4350197932694092035}
       _typeQualifiedName: System.Single[], mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: inputSerialVector
+        node: {fileID: -5230735152729629913}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   DevMode: 0
   Value:
+  - 9.550445e-38
+  - 0.11686774
+  - 4.2897333e-35
+  - 0.83717
+  - 5.235338e-28
+  - 0.78186214
+  - 0.031518225
+  - 0.49943987
+  - 3.0182175e-33
+  - 0
+  - 0
+  - 1e-45
+  - 1e-45
   - 0
   - 0
   - 0
+  - 1e-45
+  - 4.69338e-34
   - 0
   - 0
   - 0
+  - 6.558918e-34
+  - 0.28511646
+  - 0.24707207
+  - 0.2763272
+  - 3.2085008e-33
+  - 0.5851718
+  arrayToOutput:
+  - 9.550445e-38
+  - 0.11686774
+  - 4.2897333e-35
+  - 0.83717
+  - 5.235338e-28
+  - 0.78186214
+  - 0.031518225
+  - 0.49943987
+  - 3.0182175e-33
+  - 0
+  - 0
+  - 1e-45
+  - 1e-45
   - 0
   - 0
   - 0
+  - 1e-45
+  - 4.69338e-34
   - 0
   - 0
   - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  arrayToOutput: []
+  - 6.558918e-34
+  - 0.28511646
+  - 0.24707207
+  - 0.2763272
+  - 3.2085008e-33
+  - 0.5851718
   ValueName: LipReadings
 --- !u!114 &-1582970655957511384
 MonoBehaviour:
@@ -129,7 +238,7 @@ MonoBehaviour:
   m_Name: Realtime IML Output
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 887.3417, y: 35.811234}
+  position: {x: 952, y: -280}
   ports:
     keys:
     - IMLModelOutputs
@@ -165,59 +274,9 @@ MonoBehaviour:
   - {fileID: -4789966863600492424}
   - {fileID: 8240335313252649488}
   - {fileID: -1582970655957511384}
-  - {fileID: 1344032641873333808}
   - {fileID: -4350197932694092035}
+  - {fileID: -5230735152729629913}
   SceneComponent: {fileID: 0}
---- !u!114 &1344032641873333808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bffaa18ed98b0d942b9f429eb8ca06fb, type: 3}
-  m_Name: Extract Float
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -744, y: -56}
-  ports:
-    keys:
-    - inputFloat
-    - floatExtracted
-    values:
-    - _fieldName: inputFloat
-      _node: {fileID: 1344032641873333808}
-      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: floatExtracted
-      _node: {fileID: 1344032641873333808}
-      _typeQualifiedName: XNode.Node, XNode, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: InputFeatures
-        node: {fileID: -4789966863600492424}
-        reroutePoints: []
-      - fieldName: InputFeatures
-        node: {fileID: 8240335313252649488}
-        reroutePoints:
-        - {x: -377.28168, y: 388.3533}
-        - {x: 165.97876, y: 435.72745}
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  DevMode: 0
-  inputFloat: 0
-  floatExtracted: {fileID: 0}
-  m_FloatExtracted:
-    m_Values:
-    - 0
 --- !u!114 &8240335313252649488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +290,7 @@ MonoBehaviour:
   m_Name: IML Configuration
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 344, y: -40}
+  position: {x: 424, y: -392}
   ports:
     keys:
     - IMLTrainingExamplesNodes
@@ -257,8 +316,8 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
-      - fieldName: floatExtracted
-        node: {fileID: 1344032641873333808}
+      - fieldName: serialVectorFeatureExtracted
+        node: {fileID: -5230735152729629913}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -280,7 +339,7 @@ MonoBehaviour:
   IMLTrainingExamplesNodes:
   - {fileID: -4789966863600492424}
   InputFeatures:
-  - {fileID: 1344032641873333808}
+  - {fileID: -5230735152729629913}
   ModelOutput: {fileID: 0}
   KeyboardControl: 0
   TrainingKey: 0
@@ -288,7 +347,7 @@ MonoBehaviour:
   PredictedRapidlibOutput:
   - 0
   DelayedPredictedOutput: []
-  m_ExpectedInputList: 00000000
+  m_ExpectedInputList: 05000000
   m_ExpectedOutputList: 00000000
   m_LearningType: 0
   TrainOnPlaymodeChange: 0
