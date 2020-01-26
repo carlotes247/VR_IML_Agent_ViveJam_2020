@@ -28,7 +28,7 @@ public class BehaviourState : MonoBehaviour
     public void StopTalking()
     {
         //Talking = false;
-        Debug.Log("Agent has stopped talking");
+        //Debug.Log("Agent has stopped talking");
         agentAnimator.SetLayerWeight(1, 0.1f);
 
     }
@@ -36,7 +36,7 @@ public class BehaviourState : MonoBehaviour
     public void ContinueTalking()
     {
         //Talking = true;
-        Debug.Log("Agent has started talking again");
+        //Debug.Log("Agent has started talking again");
         agentAnimator.SetLayerWeight(1, 1f);
 
     }

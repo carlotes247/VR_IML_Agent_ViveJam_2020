@@ -18,8 +18,17 @@ public class SensorToIMLPipe : MonoBehaviour
     public IMLComponent MLComponent;
 
     // Values to send to IMLController
+    // Lips
     [SendToIMLController]
     public float[] LipReadings;
+    // Eyes
+    [SendToIMLController]
+    public float PupilDiameterLeft, PupilDiameterRight;
+    [SendToIMLController]
+    public Vector2 PupilPositionLeft, PupilPositionRight;
+    [SendToIMLController]
+    public float EyeOpenLeft, EyeOpenRight;
+
 
 
 
@@ -52,6 +61,19 @@ public class SensorToIMLPipe : MonoBehaviour
             }
 
         }
+
+        if (EyesSensor)
+        {
+            // Read values from eye sensor
+            PupilDiameterLeft = EyesSensor.pupilDiameterLeft;
+            PupilDiameterRight = EyesSensor.pupilDiameterRight;
+
+            PupilPositionLeft = EyesSensor.pupilPositionLeft;
+            PupilPositionRight = EyesSensor.pupilPositionRight;
+
+            EyeOpenLeft = EyesSensor.eyeOpenLeft;
+            EyeOpenRight = EyesSensor.eyeOpenRight;            
+        }
     }
 
     // Check that array of readings is in the correct size
@@ -72,4 +94,5 @@ public class SensorToIMLPipe : MonoBehaviour
         }
 
     }
+
 }
