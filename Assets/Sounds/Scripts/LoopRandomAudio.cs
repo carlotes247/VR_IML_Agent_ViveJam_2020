@@ -5,15 +5,14 @@
  
      public AudioSource randomSound;
      public string resourceFolderName;
-     public int minDur;
-     public int maxDur;
+     public float minDur;
+     public float maxDur;
      public AudioClip[] audioSources;
  
      // Use this for initialization
      void Start () {
 				
 		// Create an array
-		Debug.Log(resourceFolderName);
 	     audioSources =  Resources.LoadAll<AudioClip>(resourceFolderName);
          CallAudio ();
      }

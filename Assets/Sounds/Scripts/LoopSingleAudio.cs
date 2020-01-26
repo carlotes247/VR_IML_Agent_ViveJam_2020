@@ -4,8 +4,8 @@
  public class LoopSingleAudio : MonoBehaviour {
  
      public AudioSource soundSource;
-     public int minDur;
-     public int maxDur;
+     public float minDur;
+     public float maxDur;
  
      // Use this for initialization
      void Start () {
@@ -18,6 +18,7 @@
      private void CallAudio()
      {
          Invoke ("PlayRandomSound", Random.Range(minDur,maxDur));
+
      }
  
      private void PlayRandomSound()
