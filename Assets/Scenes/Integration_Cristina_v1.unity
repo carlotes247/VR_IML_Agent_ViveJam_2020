@@ -22437,7 +22437,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4ad9d5ada9b693b47a1e0e3237d49b37, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -23861,7 +23861,7 @@ MonoBehaviour:
   NextState: {fileID: 1921117467}
   LowScoreNextState: {fileID: 1764975558}
   AnimationClipName: 
-  mainClip: {fileID: 8300000, guid: 3952681a846024740974a52782b95d42, type: 3}
+  mainClip: {fileID: 8300000, guid: 435295103614fa04784ed787a3a1655d, type: 3}
   timer: 0
   maxTime: 0
   DebugMessage: anxious_low
